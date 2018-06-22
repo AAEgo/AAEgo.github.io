@@ -1,0 +1,240 @@
+<html> 
+<head>
+<meta charset="utf-8">
+ <title> Анимация  </title >
+  <style>
+  
+  .stars {
+    background-color: white;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+  }
+
+  .star-1 {
+    margin-top: 2%; 
+    margin-left: 80%;
+    animation-duration: 4s;
+    animation-name: twinkle;
+  }
+
+  .star-2 {
+    margin-top: 1%;
+    margin-left: 30%;
+    animation-duration: 3s;
+    animation-name: twinkle;
+  }
+
+  .star-3 {
+    margin-top: 2%;
+    margin-right: 50%;
+    animation-duration: 5s;
+    animation-name: twinkle;
+  }
+  .star-4{
+    margin-top: 1%;
+    margin-left: 70%;
+    animation-duration: 2s;
+    animation-name: twinkle;
+  }
+    .star-5 {
+    margin-top: 2%;
+    margin-left: 80%;
+    animation-duration: 3s;
+    animation-name: twinkle;
+  }
+    .star-6 {
+    margin-top: 1%;
+    margin-left: 20%;
+    animation-duration: 6s;
+    animation-name: twinkle;
+  }
+    .star-7 {
+    margin-top: 1%;
+    margin-left: 30%;
+    animation-duration: 4s;
+    animation-name: twinkle;
+  }
+    .star-8 {
+    margin-top: 1%;
+    margin-left: 50%;
+    animation-duration: 3s;
+    animation-name: twinkle;
+  }
+  @keyframes twinkle {
+    10% {
+      transform: scale(0.5);
+      opacity: 0.9;
+    }
+  }
+  .luna
+{
+  position: absolute;
+  top: 30;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+    background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 20px 5px 5px 0px white;
+  
+  animation-name: fade;
+    animation-duration: 73s;
+  }
+
+  @keyframes fade {
+    70% {
+      left: 90%;
+      opacity: 0.1;
+    }
+}
+
+  #back {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
+
+  }
+   #footer {
+    position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  }
+  
+ img {
+   filter: blur(1px);
+}
+
+#osn {
+position: absolute;
+bottom: 30px;
+    left: 25px;
+}
+  
+  .balls {
+    border-radius: 50%;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+    position: relative;  
+    width: 15px;
+    height: 15px;
+    animation-name: bounce;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+  }
+  #ball1 { 
+    left:9%;
+    animation-timing-function: linear;
+	
+  }
+  #ball2 { 
+    left:8%;
+    animation-timing-function: cubic-bezier(0.611, 0.441, 0.444, 0.9);
+  }
+#ball3 { 
+    left:7%;
+    animation-timing-function: cubic-bezier(0.611, 0.441, 0.7, 0.7);
+  }
+  #ball4 { 
+    left:8.5%;
+    animation-timing-function: cubic-bezier(0.611, 0.441, 0.4, 0.7);
+  }
+ #ball5 { 
+    left:7.5%;
+    animation-timing-function: cubic-bezier(0.611, 0.441, 0.9, 0.4);
+  }
+
+@keyframes bounce {
+  0% {
+    top: 259px;
+  } 
+  100% {
+    top: 0px;
+    opacity: 0.1;
+  }
+} 
+.heart {
+    
+    margin: 100px;
+	
+    background-color: #DC143C;
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+    animation-name: beat;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  .heart:after {
+    background-color: #DC143C;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart:before {
+    background-color: #DC143C;
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+
+  
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+	
+</style>
+<body>
+
+<div id="back"></div>
+<div class="star-1 stars"></div>
+<div class="star-2 stars"></div>
+<div class="star-3 stars"></div>
+  <div class="star-4 stars"></div>
+  <div class="star-5 stars"></div>
+  <div class="star-6 stars"></div>
+  <div class="star-7 stars"></div>
+  <div class="star-8 stars"></div>
+  <div class="luna"></div>
+  <div class="balls" id="ball1"></div>
+<div class="balls" id="ball2"></div>
+ <div class="balls" id="ball3"></div>
+ <div class="balls" id="ball4"></div>
+ <div class="balls" id="ball5"></div>
+  <div class="heart"></div>
+  <div id="osn">
+  <img src="https://cdn1.savepice.ru/uploads/2018/6/22/c9064a831f7fb954930d5a00a44f49bb-full.gif" width=210 height="135">
+  </div>
+  
+  <div id="footer">
+  <img src="https://cdn1.savepice.ru/uploads/2018/6/22/1f89d6a98dfe69d310e16abca9159aa7-full.jpg" 
+   width=100% height="35">
+  </div>
+  </body> 
+	</html> 
+  </head> 
